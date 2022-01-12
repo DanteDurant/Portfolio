@@ -1,0 +1,102 @@
+.section__title--services {
+  max-width: 500px;
+  margin: 0 auto;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 25%;
+    height: 2px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-light);
+    opacity: 0.25;
+  }
+}
+
+.service {
+  background-color: var(--clr-accent);
+  background-image: url(../img/services-background.jpg);
+  background-size: cover;
+  background-blend-mode: multiply;
+  /* so it never repeats itself */
+  color: var(--clr-light);
+  text-align: center;
+
+  &s {
+    margin-bottom: 4em;
+
+    &__item {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.work-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 2em 0 0;
+  padding: 0;
+
+  &__item {
+    color: var(--clr-accent);
+    margin: 0 0.5em;
+  }
+}
+
+.svg-icon {
+  height: 2em;
+  text-align: center;
+  margin-top: 4px;
+  filter: var(--clr-svg-accent);
+
+  &-b {
+    height: 1em;
+  }
+}
+
+@media (min-width: 800px) {
+  .services {
+    display: flex;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__item + &__item {
+      margin-left: 2em;
+    }
+  }
+}
+
+.about-me {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+  .about-me {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-column-gap: 2em;
+
+    &__body {
+      width: 51em;
+    }
+  }
+
+  .section__title--about {
+    grid-row: 1/2;
+  }
+
+  .section__subtitle--about {
+    grid-column: 1 / -1;
+    grid-row: 2/3;
+    position: relative;
+    left: -1em;
+    width: calc(max-content + 1em);
+    padding-left: 1em;
+    padding-right: 2em;
+  }
+}

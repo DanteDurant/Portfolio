@@ -1,0 +1,56 @@
+h1,
+h2,
+h3 {
+  line-height: 1;
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+}
+
+.section__title {
+  margin-bottom: 0.25em;
+
+  & strong {
+    display: block;
+  }
+
+  &--intro {
+    font-weight: var(--fw-reg);
+  }
+}
+
+.section__subtitle {
+  margin: 0;
+  font-size: var(--fs-h3);
+  position: relative;
+
+  &--intro,
+  &--about {
+    background: var(--clr-accent);
+    padding: 0.25em 1em;
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+  }
+
+  &--work {
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 2em;
+  }
+}
+
+.svg-icon-b {
+  float: right;
+  height: 3em;
+  position: absolute;
+  bottom: 0;
+  right: -2.5em;
+}
