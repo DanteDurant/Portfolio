@@ -383,7 +383,7 @@ h3 {
       background-color: var(--clr-light);
       place-self: center end; }
   .portfolio__icon {
-    height: 2rem;
+    height: 2.5rem;
     filter: var(--clr-svg-accent); }
     .portfolio__icon-container {
       margin: 0.3rem 1rem;
