@@ -15,6 +15,10 @@
   grid-template-columns: 1fr;
   grid-template-rows: min-content min-content min-content;
   grid-row-gap: 1rem;
+
+  left: -1.5rem;
+  width: max-content;
+
   &__body {
     width: 51rem;
   }

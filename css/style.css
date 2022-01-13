@@ -239,7 +239,9 @@ header {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: min-content min-content min-content;
-  grid-row-gap: 1rem; }
+  grid-row-gap: 1rem;
+  left: -1.5rem;
+  width: max-content; }
   .about-me__body {
     width: 51rem; }
 
@@ -344,6 +346,7 @@ h3 {
 
 .portfolio {
   display: grid;
+  justify-items: center;
   grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
   row-gap: 5rem;
   column-gap: 2.5rem; }
@@ -414,6 +417,16 @@ h3 {
     height: 100%;
     right: -5rem; } }
 
+@media (max-width: 418px) {
+  .svg-icon-b {
+    margin-bottom: 1rem;
+    height: 80%;
+    right: 0.1rem; } }
+
+@media (max-width: 375px) {
+  html {
+    font-size: 60%; } }
+
 @media (min-width: 600px) {
   .intro {
     display: grid;
@@ -434,9 +447,7 @@ h3 {
     text-align: right;
     position: relative;
     left: -1.5rem;
-    width: calc(100% + 1.5rem); } }
-
-@media (min-width: 600px) {
+    width: calc(100% + 1.5rem); }
   .section__subtitle--about {
     grid-column: 1 / -1;
     grid-row: 2/3;
