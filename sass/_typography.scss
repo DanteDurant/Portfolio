@@ -6,17 +6,17 @@ h3 {
 }
 
 h1 {
-  font-size: var(--fs-h1);
+  font-size: 3rem;
 }
 h2 {
-  font-size: var(--fs-h2);
+  font-size: 2.25rem;
 }
 h3 {
-  font-size: var(--fs-h3);
+  font-size: 1.25rem;
 }
 
 .section__title {
-  margin-bottom: 0.25em;
+  margin-bottom: 0.25rem;
 
   & strong {
     display: block;
@@ -29,28 +29,28 @@ h3 {
 
 .section__subtitle {
   margin: 0;
-  font-size: var(--fs-h3);
+  font-size: 1.25rem;
   position: relative;
 
   &--intro,
   &--about {
     background: var(--clr-accent);
-    padding: 0.25em 1em;
+    padding: 0.25rem 1rem;
     font-family: var(--ff-secondary);
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
   }
 
   &--work {
     color: var(--clr-accent);
     font-weight: var(--fw-bold);
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
   }
 }
 
 .svg-icon-b {
   float: right;
-  height: 3em;
+  height: 3rem;
   position: absolute;
   bottom: 0;
-  right: -2.5em;
+  right: -2.5rem;
 }

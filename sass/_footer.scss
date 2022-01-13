@@ -2,7 +2,7 @@
   background: #111;
   color: var(--clr-accent);
   text-align: center;
-  padding: 2.5em 0;
+  padding: 2.5rem 0;
   font-size: var(--fs-h3);
 
   & a {
@@ -33,14 +33,14 @@
   list-style: none;
   display: flex;
   justify-content: center;
-  margin: 2em 0 0;
+  margin: 2rem 0 0;
   padding: 0;
 
   &__item {
-    margin: 0 0.5em;
+    margin: 0 0.5rem;
   }
 
   &__link {
-    padding: 0.5em;
+    padding: 0.5rem;
   }
 }

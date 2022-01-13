@@ -4,13 +4,13 @@
   &:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 0.5em 2.5em;
+    padding: 0.5rem 2.5rem;
     letter-spacing: 2px;
     font-weight: var(--fw-bold);
     display: inline-block;
     transition: all 0.2s;
     position: relative;
-    font-size: 0.8em;
+    font-size: 0.8rem;
 
     // change for the <button> element
     border: none;

@@ -26,18 +26,10 @@
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
-@media (min-width: 800px) {
-  :root {
-    --fs-h1: 4.5rem;
-    --fs-h2: 3.75rem;
-    --fs-h3: 1.5rem;
-    --fs-body: 1.125rem;
-  }
-}
-
 /* General styles */
 
 html {
+  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
@@ -51,7 +43,7 @@ body {
 }
 
 section {
-  padding: 5em 2em;
+  padding: 5rem 2rem;
 }
 
 :focus {
