@@ -18,6 +18,9 @@ header {
 }
 
 .nav {
+  align-content: center;
+  align-items: center;
+
   position: fixed;
   background: var(--clr-dark);
   color: var(--clr-light);
@@ -57,13 +60,13 @@ header {
   }
 
   &-toggle {
-    padding: 0.5em;
+    padding: 0.5rem;
     background: transparent;
     border: 0;
     cursor: pointer;
     position: absolute;
-    right: 1rem;
-    top: 1rem;
+    right: 2rem;
+    top: 2.5rem;
     z-index: 1000;
   }
 }

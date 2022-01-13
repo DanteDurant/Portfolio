@@ -10,32 +10,16 @@
   display: inline-block;
 }
 
-@media (min-width: 600px) {
-  .intro {
-    display: grid;
-    width: max-content;
-    margin: 0 auto;
-    grid-column-gap: 1em;
-    grid-template-areas:
-      "img title"
-      "img subtitle";
-    grid-template-columns: min-content max-content;
-
-    &__img {
-      grid-area: img;
-      min-width: 25rem;
-      position: relative;
-      z-index: 2;
-    }
+.about-me {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content min-content min-content;
+  grid-row-gap: 1rem;
+  &__body {
+    width: 51rem;
   }
+}
 
-  .section__subtitle--intro {
-    align-self: start;
-    grid-column: -1 / 1;
-    grid-row: 2;
-    text-align: right;
-    position: relative;
-    left: -1.5rem;
-    width: calc(100% + 1.5rem);
-  }
+.section__subtitle--about {
+  left: -1rem;
 }
