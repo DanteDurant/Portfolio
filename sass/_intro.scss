@@ -11,16 +11,24 @@
 }
 
 .about-me {
+  margin: 0 10rem;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: min-content min-content min-content;
+  grid-template-columns: auto-fit(1fr);
+  grid-template-rows: max-content max-content max-content;
   grid-row-gap: 1rem;
 
   left: -1.5rem;
-  width: max-content;
+  min-width: min-content;
+  width: 90vw;
 
   &__body {
-    width: 51rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 51rem;
+
+    text-overflow: ellipsis;
+    white-space: wrap;
   }
 }
 

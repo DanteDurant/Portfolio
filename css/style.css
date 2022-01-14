@@ -1,7 +1,7 @@
 @keyframes moveInBottom {
   0% {
-    opacity: 0;
-    transform: translateY(3rem); }
+    opacity: 0.5;
+    transform: translateY(0.5rem); }
   100% {
     opacity: 1;
     transform: translate(0); } }
@@ -236,14 +236,21 @@ header {
   display: inline-block; }
 
 .about-me {
+  margin: 0 10rem;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: min-content min-content min-content;
+  grid-template-columns: auto-fit(1fr);
+  grid-template-rows: max-content max-content max-content;
   grid-row-gap: 1rem;
   left: -1.5rem;
-  width: max-content; }
+  min-width: min-content;
+  width: 90vw; }
   .about-me__body {
-    width: 51rem; }
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 51rem;
+    text-overflow: ellipsis;
+    white-space: wrap; }
 
 .section__subtitle--about {
   left: -1rem; }
@@ -466,7 +473,9 @@ h3 {
     margin-left: auto;
     margin-right: auto; }
     .services__item + .services__item {
-      margin-left: 2rem; } }
+      margin-left: 2rem; }
+  .about-me {
+    width: 51rem; } }
 
 @media (min-width: 2000px) {
   html {
