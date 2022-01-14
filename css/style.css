@@ -415,7 +415,7 @@ h3 {
     bottom: 0.7rem;
     height: 2.5rem; }
 
-@media (max-width: 600px) {
+@media (max-width: 590px) {
   .section__title--intro {
     font-size: 5rem; }
   .section__subtitle--intro {
@@ -434,7 +434,7 @@ h3 {
   html {
     font-size: 60%; } }
 
-@media (min-width: 600px) {
+@media (min-width: 610px) {
   .intro {
     display: grid;
     width: max-content;

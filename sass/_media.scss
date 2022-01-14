@@ -5,7 +5,7 @@
 // 1536×864 (3.88%)
 // 375×667 (3.75%)
 
-@media (max-width: 600px) {
+@media (max-width: 590px) {
   .section {
     &__title--intro {
       font-size: 5rem;
@@ -35,7 +35,7 @@
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 610px) {
   .intro {
     display: grid;
     width: max-content;
