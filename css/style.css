@@ -310,7 +310,7 @@ h3 {
   margin: 0; }
 
 h1 {
-  font-size: 5rem; }
+  font-size: 3rem; }
 
 h2 {
   font-size: 2.25rem; }
@@ -327,7 +327,7 @@ h3 {
 
 .section__subtitle {
   margin: 0;
-  font-size: 2.25rem;
+  font-size: 1.25rem;
   position: relative; }
   .section__subtitle--intro, .section__subtitle--about {
     background: var(--clr-accent);
@@ -341,10 +341,10 @@ h3 {
 
 .svg-icon-b {
   float: right;
-  height: 100%;
+  height: 3rem;
   position: absolute;
   bottom: 0;
-  right: -4rem; }
+  right: -2.5rem; }
 
 .my-work {
   background-color: var(--clr-dark);
@@ -415,7 +415,9 @@ h3 {
     bottom: 0.7rem;
     height: 2.5rem; }
 
-@media (max-width: 590px) {
+@media (max-width: 600px) {
+  html {
+    font-size: 80%; }
   .section__title--intro {
     font-size: 5rem; }
   .section__subtitle--intro {
@@ -424,7 +426,7 @@ h3 {
     height: 100%;
     right: -5rem; } }
 
-@media (max-width: 418px) {
+@media (max-width: 531px) {
   .svg-icon-b {
     margin-bottom: 1rem;
     height: 80%;
@@ -434,7 +436,9 @@ h3 {
   html {
     font-size: 60%; } }
 
-@media (min-width: 610px) {
+@media (min-width: 600px) {
+  html {
+    font-size: 80%; }
   .intro {
     display: grid;
     width: max-content;
