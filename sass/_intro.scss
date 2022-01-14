@@ -13,7 +13,7 @@
 .about-me {
   margin: 0 10rem;
   display: grid;
-  grid-template-columns: auto-fit(1fr);
+  grid-template-columns: 1fr;
   grid-template-rows: max-content max-content max-content;
   grid-row-gap: 1rem;
 

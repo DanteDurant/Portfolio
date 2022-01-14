@@ -238,7 +238,7 @@ header {
 .about-me {
   margin: 0 10rem;
   display: grid;
-  grid-template-columns: auto-fit(1fr);
+  grid-template-columns: 1fr;
   grid-template-rows: max-content max-content max-content;
   grid-row-gap: 1rem;
   left: -1.5rem;
@@ -310,7 +310,7 @@ h3 {
   margin: 0; }
 
 h1 {
-  font-size: 3rem; }
+  font-size: 5rem; }
 
 h2 {
   font-size: 2.25rem; }
@@ -327,7 +327,7 @@ h3 {
 
 .section__subtitle {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 2.25rem;
   position: relative; }
   .section__subtitle--intro, .section__subtitle--about {
     background: var(--clr-accent);
@@ -341,10 +341,10 @@ h3 {
 
 .svg-icon-b {
   float: right;
-  height: 3rem;
+  height: 100%;
   position: absolute;
   bottom: 0;
-  right: -2.5rem; }
+  right: -4rem; }
 
 .my-work {
   background-color: var(--clr-dark);
