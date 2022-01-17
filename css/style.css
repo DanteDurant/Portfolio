@@ -424,12 +424,12 @@ h3 {
   opacity: 0;
   transform: translateY(8rem); }
 
-.section__title {
+.section__title-slider {
   max-width: 80rem;
   margin: 0 auto 8rem auto; }
 
 .section__description {
-  font-size: 1.8rem;
+  font-size: 3rem;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--color-primary-text);
@@ -443,7 +443,7 @@ h3 {
 /* SLIDER */
 .slider {
   max-width: 100rem;
-  height: 50rem;
+  height: 55rem;
   margin: 0 auto;
   position: relative;
   /* IN THE END */
@@ -471,7 +471,7 @@ h3 {
   top: 50%;
   z-index: 10;
   border: none;
-  background: rgba(255, 255, 255, 0.7);
+  background: #16e0bec0;
   font-family: inherit;
   color: #333;
   border-radius: 50%;
@@ -479,6 +479,16 @@ h3 {
   width: 5.5rem;
   font-size: 3.25rem;
   cursor: pointer; }
+
+.slider__btn--left-arr {
+  position: absolute;
+  top: -2.5rem;
+  left: 1rem; }
+
+.slider__btn--right-arr {
+  position: absolute;
+  top: -2.5rem;
+  left: 1rem; }
 
 .slider__btn--left {
   left: 6%;
@@ -513,58 +523,8 @@ h3 {
 
 .dots__dot--active {
   /* background-color: #fff; */
-  background-color: #888;
+  background-color: white;
   opacity: 1; }
-
-/* TESTIMONIALS */
-.testimonial {
-  width: 65%;
-  position: relative; }
-
-.testimonial::before {
-  content: "\201C";
-  position: absolute;
-  top: -5.7rem;
-  left: -6.8rem;
-  line-height: 1;
-  font-size: 20rem;
-  font-family: inherit;
-  color: var(--color-primary);
-  z-index: -1; }
-
-.testimonial__header {
-  font-size: 2.25rem;
-  font-weight: 500;
-  margin-bottom: 1.5rem; }
-
-.testimonial__text {
-  font-size: 1.7rem;
-  margin-bottom: 3.5rem;
-  color: #666; }
-
-.testimonial__author {
-  margin-left: 3rem;
-  font-style: normal;
-  display: grid;
-  grid-template-columns: 6.5rem 1fr;
-  column-gap: 2rem; }
-
-.testimonial__photo {
-  grid-row: 1 / span 2;
-  width: 6.5rem;
-  border-radius: 50%; }
-
-.testimonial__name {
-  font-size: 1.7rem;
-  font-weight: 500;
-  align-self: end;
-  margin: 0; }
-
-.testimonial__location {
-  font-size: 1.5rem; }
-
-.section__title--testimonials {
-  margin-bottom: 4rem; }
 
 @media (max-width: 600px) {
   html {
