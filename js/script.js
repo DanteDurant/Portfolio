@@ -4,18 +4,57 @@ const tabsContent = document.querySelectorAll(".operations__content");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelectorAll(".nav__link");
 /////////////////////////////////////////
+// navigation
 
-navToggle.addEventListener("click", () => {
-  document.body.classList.toggle("nav-open");
+///////////////////////////////////////////////////////////
+// Make mobile navigation work
+
+const btnNavEl = document.querySelector(".nav-toggle");
+const headerEl = document.querySelector(".header");
+
+btnNavEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
 });
 
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    document.body.classList.remove("nav-open");
-  });
-});
+// navToggle.addEventListener("click", () => {
+//   document.body.classList.toggle("nav-open");
+// });
 
-// Lazy loading images
+// navLinks.forEach((link) => {
+//   link.addEventListener("click", () => {
+//     document.body.classList.remove("nav-open");
+//   });
+// });
+
+///////////////////////////////////////////////////////////
+// Sticky navigation
+
+const sectionIntroEl = document.querySelector(".intro");
+
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    console.log(ent);
+
+    if (ent.isIntersecting === false) {
+      document.body.classList.add("sticky");
+    }
+
+    if (ent.isIntersecting === true) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    // In the viewport
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  }
+);
+obs.observe(sectionIntroEl);
+
+/////////////////////////////////////////////////////////
+// Lazy loading images -- !!!!!!!!!!!
 const imgTargets = document.querySelectorAll("img[data-src]");
 
 const loadImg = function (entries, observer) {

@@ -20,6 +20,21 @@
 
     <link rel="stylesheet" href="css/style.css" />
 
+    <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule=""
+    src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+  ></script>
+
+  <script
+    defer
+    src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+  ></script>
+  <script defer src="js/script.js"></script>
+
     <link rel="shortcut icon" type="image/png" href="img/faviconh.png" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,7 +48,32 @@
   </head>
 
   <body>
-    <header>
+
+  <header class="header">
+
+    <a href="#">
+     <img class="logo" alt="Profood logo" src="img/logo.svg" />
+   </a>
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li><a class="main-nav-link" href="#home">Home</a></li>
+        <li><a class="main-nav-link" href="#services">Services</a></li>
+        <li>
+          <a class="main-nav-link" href="#about">About me</a>
+        </li>
+        <li><a class="main-nav-link" href="#work">My work</a></li>
+      </ul>
+
+    </nav>
+
+    <button class="nav-toggle">
+      <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+      <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+    </button>
+  </header>
+
+
+    <!-- <header>
       <div class="logo">
         <img class="logo_img" src="img/logo.svg" alt="" />
       </div>
@@ -56,7 +96,7 @@
           </li>
         </ul>
       </nav>
-    </header>
+    </header> -->
 
     <!-- INTRODUCTION -->
     <section class="intro" id="home">
@@ -84,7 +124,7 @@
         <div class="services__item">
           <h3>Development</h3>
           <p>
-            With a deep love for computers and all technology, I aim to please by delivering clean and well-organized code with meticulous attention to details, while continuously striving to improve my aptitude and expand my knowledge in the ever-expanding field of computer science.
+            With a deep love for computers and all technology, I aim to deliver by writing clean and well-organized code with meticulous attention to details, while continuously striving to improve my aptitude and expand my knowledge in the ever-expanding field of computer science.
           </p>
         </div>
         <!--service-->
@@ -154,14 +194,14 @@
 
         </p>
         <p class="about-me__body">
-          Avid reader of non-fiction such as textbooks on programming languages and frameworks as well as other technology related publications. Other intrests include: psychology and philosophy, neuroscience and kinesiology. One possessing xcellent communication skills, transparency and consistency are essential, I believe, to facilitate an integral and favorable work environment.
+          Avid reader of computer science textbooks on languages and frameworks as well as other technology related publications. Other intrests include: psychology and philosophy, neuroscience and kinesiology. One possessing xcellent communication skills, transparency and consistency are essential, I believe, to facilitate an integral and favorable work environment.
      
 
   
     </section>
 
     <!-- MY WORK -->
-    <section class="my-work section" id="work section--3">
+    <section class="my-work section" id="work">
       
         <div class="section__title-slider section__title--testimonials">
           <h1 class="section__description">Work</h1>
@@ -611,6 +651,6 @@
     </footer>
 
 
-    <script src="js/index.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
