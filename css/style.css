@@ -19,6 +19,8 @@
   --clr-light: rgb(255, 255, 255);
   --clr-dark: #303030;
   --clr-accent: #16e0bd;
+  --clr-svg-dark: invert(13%) sepia(0%) saturate(0%) hue-rotate(231deg)
+    brightness(94%) contrast(83%);
   --clr-svg-accent: invert(83%) sepia(37%) saturate(5453%) hue-rotate(117deg)
     brightness(103%) contrast(83%);
   --fs-h1: 3rem;
@@ -40,6 +42,9 @@ body {
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
   line-height: 1.6; }
+
+a {
+  z-index: 998; }
 
 section {
   padding: 5rem 2rem; }
@@ -148,36 +153,43 @@ strong {
   justify-content: space-between;
   align-items: center;
   justify-items: center;
-  background-color: var(--clr-accent);
+  justify-content: space-between;
+  background-color: var(--clr-dark);
   /* Because we want header to be sticky later */
   height: 5rem;
   padding: 0 1rem;
   position: relative; }
 
 .logo {
-  height: 2rem; }
+  height: 2rem;
+  filter: var(--clr-svg-accent); }
 
 /**************************/
 /* NAVIGATION */
 /**************************/
+.main-nav {
+  width: 40rem; }
+
 .main-nav-list {
-  list-style: none;
   display: flex;
-  align-items: end;
-  gap: 2rem; }
+  flex-grow: 1;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 5rem; }
 
 .main-nav-link:link,
 .main-nav-link:visited {
   display: inline-block;
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
+  color: var(--clr-accent);
+  font-weight: 900;
   font-size: 1.2rem;
   transition: all 0.3s; }
 
 .main-nav-link:hover,
 .main-nav-link:active {
-  color: var(--clr-accent); }
+  color: var(--clr-dark); }
 
 .main-nav-link.nav-cta:link,
 .main-nav-link.nav-cta:visited {
@@ -191,19 +203,25 @@ strong {
   background-color: var(--clr-accent); }
 
 /* MOBILE */
-.btn-mobile-nav {
+.nav-toggle {
   border: none;
   background: none;
   cursor: pointer;
   display: none; }
 
 .icon-mobile-nav {
-  height: 4.8rem;
+  height: 3rem;
   width: 4.8rem;
-  color: #333; }
+  color: var(--clr-accent); }
+
+.sticky .icon-mobile-nav {
+  color: var(--clr-dark); }
 
 .icon-mobile-nav[name="close-outline"] {
   display: none; }
+
+.main-nav {
+  z-index: 999; }
 
 /* STICKY NAVIGATION */
 .sticky .header {
@@ -211,15 +229,26 @@ strong {
   top: 0;
   bottom: 0;
   width: 100%;
-  height: 8rem;
+  height: 4rem;
   padding-top: 0;
   padding-bottom: 0;
-  background-color: rgba(255, 255, 255, 0.97);
+  background-color: var(--clr-light);
   z-index: 999;
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03); }
 
-.sticky .section-hero {
-  margin-top: 9.6rem; }
+.sticky .main-nav-link:link,
+.sticky .main-nav-link:visited {
+  color: var(--clr-dark); }
+
+.sticky .main-nav-link:hover,
+.sticky .main-nav-link:active {
+  color: var(--clr-accent); }
+
+.sticky .logo {
+  filter: var(--clr-svg-dark); }
+
+.sticky .intro {
+  margin-top: 4rem; }
 
 .intro {
   position: relative; }
@@ -354,7 +383,7 @@ h3 {
   .portfolio__item {
     justify-content: center;
     display: grid;
-    grid-template-rows: 6rem 16rem 6rem min-content min-content;
+    grid-template-rows: 4rem 2rem 16rem 6rem min-content min-content;
     grid-template-columns: calc(2 / (16rem * 1.6189)) calc(2 / (16rem * 1.6189));
     overflow: hidden;
     border: white solid 2px;
@@ -364,18 +393,24 @@ h3 {
     .portfolio__item--head {
       grid-column: 1 / 3;
       color: var(--clr-accent);
-      font-size: 4rem;
-      margin: 1rem 0.8rem;
+      font-size: 2.5rem;
+      margin: 0.7rem 0.8rem 0.5rem 0.8rem;
+      height: min-content; }
+    .portfolio__item--sub {
+      grid-row: 2/3;
+      grid-column: 1/3;
+      text-align: center;
       height: min-content; }
   .portfolio__img {
     place-self: center;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
     grid-column: 1 / 3;
     height: 100%;
     width: calc(16rem * 1.6189);
     background-size: cover;
     background-position: center; }
   .portfolio--btn {
+    grid-row: 4/5;
     place-self: center start;
     width: max-content;
     height: max-content;
@@ -436,7 +471,7 @@ h3 {
 
 /* SLIDER */
 .slider {
-  max-width: 100rem;
+  max-width: 60rem;
   height: 55rem;
   margin: 0 auto;
   position: relative;
@@ -453,12 +488,6 @@ h3 {
   justify-content: center;
   /* THIS creates the animation! */
   transition: transform 1s; }
-
-.slide > img {
-  /* Only for images that have different size than slide */
-  width: 100%;
-  height: 100%;
-  object-fit: cover; }
 
 .slider__btn {
   position: absolute;

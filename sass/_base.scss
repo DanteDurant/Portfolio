@@ -14,6 +14,8 @@
   --clr-light: rgb(255, 255, 255);
   --clr-dark: #303030;
   --clr-accent: #16e0bd;
+  --clr-svg-dark: invert(13%) sepia(0%) saturate(0%) hue-rotate(231deg)
+    brightness(94%) contrast(83%);
   --clr-svg-accent: invert(83%) sepia(37%) saturate(5453%) hue-rotate(117deg)
     brightness(103%) contrast(83%);
 
@@ -40,6 +42,9 @@ body {
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
   line-height: 1.6;
+}
+a {
+  z-index: 998;
 }
 
 section {
