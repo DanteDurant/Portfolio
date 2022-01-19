@@ -11,12 +11,13 @@
   row-gap: 5rem;
   column-gap: 2.5rem;
 
+  z-index: 1;
+
   &__item {
     justify-content: center;
 
     display: grid;
     grid-template-rows: 4rem 2rem 16rem 6rem min-content min-content;
-    grid-template-columns: calc(2 / (16rem * 1.6189)) calc(2 / (16rem * 1.6189));
     overflow: hidden;
     border: white solid 2px;
 
@@ -24,6 +25,7 @@
     height: calc(30rem * 1.6189);
 
     position: relative;
+    z-index: 2;
 
     &--head {
       grid-column: 1 / 3;

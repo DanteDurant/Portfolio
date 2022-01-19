@@ -1,14 +1,3 @@
-const tabsContainer = document.querySelector(".operations__tab-container");
-const tabsContent = document.querySelectorAll(".operations__content");
-
-const navToggle = document.querySelector(".nav-toggle");
-const navLinks = document.querySelectorAll(".nav__link");
-/////////////////////////////////////////
-// navigation
-
-///////////////////////////////////////////////////////////
-// Make mobile navigation work
-
 const btnNavEl = document.querySelector(".nav-toggle");
 const headerEl = document.querySelector(".header");
 
@@ -16,15 +5,7 @@ btnNavEl.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
 });
 
-// navToggle.addEventListener("click", () => {
-//   document.body.classList.toggle("nav-open");
-// });
-
-// navLinks.forEach((link) => {
-//   link.addEventListener("click", () => {
-//     document.body.classList.remove("nav-open");
-//   });
-// });
+// Make mobile navigation work
 
 ///////////////////////////////////////////////////////////
 // Smooth scrolling animation
@@ -63,7 +44,6 @@ const sectionIntroEl = document.querySelector(".intro");
 const obs = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
-    console.log(ent);
 
     if (ent.isIntersecting === false) {
       document.body.classList.add("sticky");
@@ -111,6 +91,9 @@ imgTargets.forEach((img) => imgObserver.observe(img));
 
 ///////////////////////////////////////
 // Slider
+
+const touchDevice = false;
+
 const slider = function () {
   const slides = document.querySelectorAll(".slide");
   const btnLeft = document.querySelector(".slider__btn--left");
@@ -121,6 +104,7 @@ const slider = function () {
   const maxSlide = slides.length;
 
   // Functions
+
   const createDots = function () {
     slides.forEach(function (_, i) {
       dotContainer.insertAdjacentHTML(
@@ -193,4 +177,5 @@ const slider = function () {
     }
   });
 };
+
 slider();
