@@ -8,33 +8,6 @@ btnNavEl.addEventListener("click", function () {
 // Make mobile navigation work
 
 ///////////////////////////////////////////////////////////
-// Smooth scrolling animation
-
-const allLinks = document.querySelectorAll("a:link");
-
-allLinks.forEach(function (link) {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
-    const href = link.getAttribute("href");
-
-    // Scroll back to top
-    if (href === "#")
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-
-    // Scroll to other links
-    if (href !== "#" && href.startsWith("#")) {
-      const sectionEl = document.querySelector(href);
-      sectionEl.scrollIntoView({ behavior: "smooth" });
-    }
-
-    // Close mobile naviagtion
-    if (link.classList.contains("main-nav-link"))
-      headerEl.classList.toggle("nav-open");
-  });
-});
 
 ///////////////////////////////////////////////////////////
 // Sticky navigation
@@ -64,30 +37,30 @@ obs.observe(sectionIntroEl);
 
 /////////////////////////////////////////////////////////
 // Lazy loading images -- !!!!!!!!!!!
-const imgTargets = document.querySelectorAll("img[data-src]");
+// const imgTargets = document.querySelectorAll("img[data-src]");
 
-const loadImg = function (entries, observer) {
-  const [entry] = entries;
+// const loadImg = function (entries, observer) {
+//   const [entry] = entries;
 
-  if (!entry.isIntersecting) return;
+//   if (!entry.isIntersecting) return;
 
-  // Replace src with data-src
-  entry.target.src = entry.target.dataset.src;
+//   // Replace src with data-src
+//   entry.target.src = entry.target.dataset.src;
 
-  entry.target.addEventListener("load", function () {
-    entry.target.classList.remove("lazy-img");
-  });
+//   entry.target.addEventListener("load", function () {
+//     entry.target.classList.remove("lazy-img");
+//   });
 
-  observer.unobserve(entry.target);
-};
+//   observer.unobserve(entry.target);
+// };
 
-const imgObserver = new IntersectionObserver(loadImg, {
-  root: null,
-  threshold: 0,
-  rootMargin: "200px",
-});
+// const imgObserver = new IntersectionObserver(loadImg, {
+//   root: null,
+//   threshold: 0,
+//   rootMargin: "200px",
+// });
 
-imgTargets.forEach((img) => imgObserver.observe(img));
+// imgTargets.forEach((img) => imgObserver.observe(img));
 
 ///////////////////////////////////////
 // Slider
