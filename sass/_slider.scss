@@ -70,26 +70,25 @@
     font-size: 3.25rem;
     cursor: pointer;
 
+    &--arr {
+      height: 5rem;
+      filter: var(--clr-svg-dark);
+    }
+
     &--left {
       left: 6%;
       transform: translate(-50%, -50%);
 
       &-arr {
-        position: absolute;
-        top: -2.5rem;
-        left: 1rem;
+        // position: absolute;
+        height: 5rem;
+        filter: var(--clr-svg-dark);
       }
     }
 
     &--right {
       right: 6%;
       transform: translate(50%, -50%);
-
-      &-arr {
-        position: absolute;
-        top: -2.5rem;
-        left: 1rem;
-      }
     }
   }
 }
@@ -115,8 +114,7 @@
     /* Only necessary when overlying images */
     /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
     &--active {
-      /* background-color: #fff; */
-      background-color: rgb(255, 255, 255);
+      background-color: var(--clr-accent);
       opacity: 1;
     }
 
