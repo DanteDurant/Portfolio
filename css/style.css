@@ -255,6 +255,9 @@ strong {
   .intro__img {
     box-shadow: var(--bs); }
 
+.lazy-img {
+  filter: blur(20px); }
+
 .section__subtitle--intro {
   display: inline-block; }
 

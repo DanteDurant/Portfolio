@@ -91,8 +91,9 @@
       </p>
 
       <img
-        class="intro__img"
-        src="img/oo.jpg"
+        class="intro__img lazy-img"
+        src="img/oo-lazy.jpg"
+        data-src="img/oo.jpg"
         alt="a picture of Dante's face"
       />
     </section>
@@ -105,7 +106,7 @@
         <div class="services__item">
           <h3>Development</h3>
           <p>
-            With a deep love for computers and all technology, I aim to deliver by writing clean and well-organized code with meticulous attention to details, while continuously striving to improve my aptitude and expand my knowledge in the ever-expanding field of computer science.
+            With a deep love for computers and all technology, I aim to deliver clean and well-organized code with meticulous attention to detail, while continuously striving to improve my aptitude and expand my knowledge in the ever-expanding field of computer science.
           </p>
         </div>
 
@@ -177,8 +178,8 @@
 
         </p>
         <p class="about-me__body">
-          Avid reader of computer science textbooks on languages and frameworks as well as other technology related publications. Other intrests include: psychology and philosophy, neuroscience and kinesiology. One possessing xcellent communication skills, transparency and consistency are essential, I believe, to facilitate an integral and favorable work environment.
-     
+          Veracious reader of computer science textbooks on languages and frameworks as well as other technology-related publications. Other interests include psychology and philosophy, neuroscience, and kinesiology. Having developed excellent communication skills, I believe transparency and consistency are essential to facilitate an integral and favorable work environment.
+ 
 
   
     </section>
@@ -202,7 +203,11 @@
               <h1 class="portfolio__item--head">Profood</h1>
               <h3 class="portfolio__item--sub">Food Delivery Service Website</h3>
     
-              <img class="portfolio__img" src="img/OF1.JPG" alt="" />
+              <img 
+              class="portfolio__img lazy-img" 
+              src="img/OF1-lazy.JPG" 
+              data-src="img/OF1.jpg"
+              alt="" />
     
               <a href="https://profood-dante.netlify.app" target="_blank" class="btn btn--accent btn--animated portfolio--btn"
               >view website</a>
@@ -589,7 +594,7 @@
           <div class="slide"><img src="img/img-2.jpg" alt="Photo 2" /></div>
           <div class="slide"><img src="img/img-3.jpg" alt="Photo 3" /></div>
           <div class="slide"><img src="img/img-4.jpg" alt="Photo 4" /></div> -->
-          <button class="slider__btn slider__btn--left">
+          <button class="slider__btn slider__btn--left btn--animated ">
             <img src="img/left-arrow-block.svg" alt="left arrow" class="slider__btn--arr" />
           </button>
 

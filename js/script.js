@@ -71,30 +71,31 @@ obs.observe(sectionIntroEl);
 
 /////////////////////////////////////////////////////////
 // Lazy loading images -- !!!!!!!!!!!
-// const imgTargets = document.querySelectorAll("img[data-src]");
 
-// const loadImg = function (entries, observer) {
-//   const [entry] = entries;
+const imgTargets = document.querySelectorAll("img[data-src]");
 
-//   if (!entry.isIntersecting) return;
+const loadImg = function (entries, observer) {
+  const [entry] = entries;
 
-//   // Replace src with data-src
-//   entry.target.src = entry.target.dataset.src;
+  if (!entry.isIntersecting) return;
 
-//   entry.target.addEventListener("load", function () {
-//     entry.target.classList.remove("lazy-img");
-//   });
+  // Replace src with data-src
+  entry.target.src = entry.target.dataset.src;
 
-//   observer.unobserve(entry.target);
-// };
+  entry.target.addEventListener("load", function () {
+    entry.target.classList.remove("lazy-img");
+  });
 
-// const imgObserver = new IntersectionObserver(loadImg, {
-//   root: null,
-//   threshold: 0,
-//   rootMargin: "200px",
-// });
+  observer.unobserve(entry.target);
+};
 
-// imgTargets.forEach((img) => imgObserver.observe(img));
+const imgObserver = new IntersectionObserver(loadImg, {
+  root: null,
+  threshold: 0,
+  rootMargin: "200px",
+});
+
+imgTargets.forEach((img) => imgObserver.observe(img));
 
 ///////////////////////////////////////
 // Slider
