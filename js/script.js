@@ -53,12 +53,10 @@ x.addListener(myFunction);
 function myFunction(x) {
   if (x.matches) {
     // If media query matches
-    document.body.style.backgroundColor = "yellow";
     document.body.classList.add("sticky");
   } else {
     const sectionIntroEl = document.querySelector(".intro");
 
-    document.body.style.backgroundColor = "red";
     const obs = new IntersectionObserver(
       function (entries) {
         const ent = entries[0];
