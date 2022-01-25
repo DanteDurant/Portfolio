@@ -46,28 +46,62 @@ allLinks.forEach(function (link) {
 // );
 // obs.observe(sectionIntroEl);
 
-const sectionIntroEl = document.querySelector(".intro");
+const x = window.matchMedia("(max-width: 601px)");
+myFunction(x); // Call listener function at run time
+x.addListener(myFunction);
 
-const obs = new IntersectionObserver(
-  function (entries) {
-    const ent = entries[0];
+function myFunction(x) {
+  if (x.matches) {
+    // If media query matches
+    document.body.style.backgroundColor = "yellow";
+    document.body.classList.add("sticky");
+  } else {
+    const sectionIntroEl = document.querySelector(".intro");
 
-    if (ent.isIntersecting === false) {
-      document.body.classList.add("sticky");
-    }
+    document.body.style.backgroundColor = "red";
+    const obs = new IntersectionObserver(
+      function (entries) {
+        const ent = entries[0];
 
-    if (ent.isIntersecting === true) {
-      document.body.classList.remove("sticky");
-    }
-  },
-  {
-    // In the viewport
-    root: null,
-    threshold: 0,
-    rootMargin: "-50px",
+        if (ent.isIntersecting === false) {
+          document.body.classList.add("sticky");
+        }
+
+        if (ent.isIntersecting === true) {
+          document.body.classList.remove("sticky");
+        }
+      },
+      {
+        // In the viewport
+        root: null,
+        threshold: 0,
+        rootMargin: "-50px",
+      }
+    );
+    obs.observe(sectionIntroEl);
   }
-);
-obs.observe(sectionIntroEl);
+}
+
+// const obs = new IntersectionObserver(
+//   function (entries) {
+//     const ent = entries[0];
+
+//     if (ent.isIntersecting === false) {
+//       document.body.classList.add("sticky");
+//     }
+
+//     if (ent.isIntersecting === true) {
+//       document.body.classList.remove("sticky");
+//     }
+//   },
+//   {
+//     // In the viewport
+//     root: null,
+//     threshold: 0,
+//     rootMargin: "-50px",
+//   }
+// );
+// obs.observe(sectionIntroEl);
 
 /////////////////////////////////////////////////////////
 // Lazy loading images -- !!!!!!!!!!!
