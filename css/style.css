@@ -258,6 +258,7 @@ strong {
     background-color: var(--clr-dark); }
 
 .lazy-img {
+  width: 100%;
   filter: blur(5px); }
 
 .section__subtitle--intro {
