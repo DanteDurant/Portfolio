@@ -76,6 +76,7 @@ function myFunction(x) {
         rootMargin: "-50px",
       }
     );
+
     obs.observe(sectionIntroEl);
   }
 }
