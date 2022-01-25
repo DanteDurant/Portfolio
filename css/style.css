@@ -253,7 +253,9 @@ strong {
 .intro {
   position: relative; }
   .intro__img {
-    box-shadow: var(--bs); }
+    box-shadow: var(--bs);
+    padding: 2rem;
+    background-color: var(--clr-dark); }
 
 .lazy-img {
   filter: blur(5px); }
